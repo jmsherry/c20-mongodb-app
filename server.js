@@ -54,7 +54,7 @@ app.get("/api/v1/cars{/:id}", async (req, res) => {
     // if(!cars.length) return res.sendStatus(404);
     res.status(200).json(cars);
   } catch (err) {
-    logger.error(err);
+    console.error(err);
     res.status(500).send(err);
   }
 });
